@@ -2,6 +2,8 @@
  services:
    db:
      image: postgres
+     volumes:
+        - ./.database_backup:/var/lib/postgresql/data
    web:
      build: .
      command: python manage.py runserver 0.0.0.0:8000

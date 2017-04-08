@@ -1,0 +1,3 @@
+#!/bin/bash
+set -e
+docker-compose run --rm --entrypoint 'flake8 legislation_tracker '"$*" web
